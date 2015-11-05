@@ -1,0 +1,73 @@
+#bg
+  top: 0px
+  position: absolute
+  display: -moz-box
+  display: -ms-flexbox
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  flex-direction: row
+  width: 100%
+  z-index: 10
+  > .img
+    width: 100%
+    margin: 0 auto
+    padding: 0px
+    float: left
+    background-size: 100%
+    background-repeat: no-repeat
+    min-height: 1024px
+
+.first
+  margin-top: 300px
+  min-height: 1000px !important
+  background-color: white !important
+
+.second
+  min-height: 300px !important
+  background-color: white !important
+
+.third
+  min-height: 300px !important
+  background-color: white !important
+
+.fourth
+  min-height: 300px !important
+  background-color: white !important
+  margin-bottom: 0 !important
+
+.blockItem
+  width: 100%
+  overflow: hidden
+  display: -moz-box
+  display: -ms-flexbox
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  flex-direction: row
+  margin-bottom: 305px
+  z-index: 100
+  position: relative
+  +breakpoint(tablet)
+    margin: 0 !important
+    min-height: auto !important
+    height: auto !important
+  +breakpoint(mobileonly)
+    margin: 0 !important
+    min-height: auto !important
+    height: auto !important
+
+.innerBlock
+  width: 100%
+  &.texture
+    background-image: url('../images/texture-pattern.jpg')
+    background-size: 32px 32px
+    // height: 300px
+  &.texture-paper
+    background-image: url('../images/texture-pattern-paper.jpg')
+    background-size: 175px
+    background-size: 175px
+  &.border-bottom
+    border-bottom: 1px solid #c6c6c6
+  &.border-top
+    border-top: 1px solid #c6c6c6

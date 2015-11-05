@@ -1,0 +1,15 @@
+// sprite MAPS and URLS
+$sprite1xMap: sprite-map("@1x/*.png", $spacing: $spacing-sprites-generic)
+$sprite2xMap: sprite-map("@2x/*.png", $spacing: $spacing-sprites-generic * 2)
+
+$sprite1xUrl: sprite-url($sprite1xMap)
+$sprite2xUrl: sprite-url($sprite2xMap)
+
+// sprite mixin
+=sprite($spriteName, $renderSize: false, $offsetX: 0, $offsetY: 0)
+    +use1x2xSprite($spriteName, $sprite1xMap, $sprite2xMap, $sprite1xUrl, $sprite2xUrl, $renderSize, $offsetX, $offsetY)
+
+// Retina #TODO required more time to setup Gruntfile
+// .chalk
+//   +sprite(chalk, true)
+
