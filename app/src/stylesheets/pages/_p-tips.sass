@@ -1,6 +1,8 @@
 .p-tips--wrapper
   overflow: hidden
   height: 3240px
+  +breakpoint(laptop)
+    height: auto
   +breakpoint(tablet)
     height: auto
   +breakpoint(mobileonly)
@@ -19,14 +21,16 @@
 .p-tips--bg1
   @extend %banner-bg--common
   background-image: url('../images/tips-banner-1.jpg')
+  background-size: 100%
+  background-position: top center
   height: 600px
-  +breakpoint(mobileonly)
-    height: auto !important
-    background-repeat: repeat
+  +breakpoint(laptop)
+    height: 1000px !important
   +breakpoint(tablet)
     height: 300px !important
   +breakpoint(mobileonly)
     height: 250px !important
+    background-size: cover !important
   &:before
     +img-retina('../images/@1x/chalk-drawing.png', '../images/@2x/chalk-drawing.png', 627px, 303px)
     background-size: cover
@@ -61,40 +65,55 @@
   @extend %banner-bg--common
   background-image: url('../images/tips-banner-2.jpg')
   height: 800px !important
-  +breakpoint(mobileonly)
-    height: 150px !important
+  +breakpoint(laptop)
+    height: 1100px !important
   +breakpoint(tablet)
     height: 250px !important
+    background-size: cover !important
+  +breakpoint(mobileonly)
+    height: 150px !important
+    background-size: cover !important
 
 .p-tips--bg3
   @extend %banner-bg--common
   background-image: url('../images/tips-banner-3.jpg')
   height: 700px !important
-  +breakpoint(mobileonly)
-    height: 150px !important
+  +breakpoint(laptop)
+    height: 1000px !important
   +breakpoint(tablet)
     height: 250px !important
+    background-size: cover !important
+  +breakpoint(mobileonly)
+    height: 150px !important
+    background-size: cover !important
 
 .p-tips--bg4
   @extend %banner-bg--common
   background-image: url('../images/tips-banner-4.jpg')
   height: 800px !important
-  +breakpoint(mobileonly)
-    height: 150px !important
+  +breakpoint(laptop)
+    height: 1000px !important
   +breakpoint(tablet)
     height: 250px !important
+    background-size: cover !important
+  +breakpoint(mobileonly)
+    height: 150px !important
+    background-size: cover !important
 
 .p-tips--bg5
   @extend %banner-bg--common
   background-image: url('../images/tips-banner-5.jpg')
   height: 300px !important
-  +breakpoint(mobileonly)
-    height: 150px !important
   +breakpoint(tablet)
     height: 250px !important
+    background-size: cover !important
+  +breakpoint(mobileonly)
+    height: 150px !important
+    background-size: cover !important
 
 .p-tips--heading
-  font-family: "Lato-Bold", sans-serif
+  font-family: "Lato", sans-serif
+  font-weight: 700
   font-size: 14px
   text-align: center
   letter-spacing: 3px
@@ -102,7 +121,8 @@
     color: white
 
 .p-tips--heading-huge
-  font-family: "Lato-Light", sans-serif
+  font-family: "Lato", "Lato-Light", sans-serif
+  font-weight: 300
   font-size: 42px
   text-align: center
   letter-spacing: 10px
@@ -111,7 +131,8 @@
 
 .p-tips--feature-heading
   color: #333
-  font-family: "Lato-Light", sans-serif
+  font-family: "Lato", "Lato-Light", sans-serif
+  font-weight: 300
   font-size: 30px
   +breakpoint(mobileonly)
     text-align: left
