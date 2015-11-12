@@ -1,0 +1,49 @@
+%icon-social--common
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: 50%
+  display: block
+  width: 100%
+  height: 100%
+
+.m-socials
+  text-align: center
+  h6
+    font-family: "Lato", sans-serif
+    color: #333333
+    font-size: 14px
+    font-weight: 600
+    margin-bottom: 25px
+  a
+    +inline-block
+    color: #999999
+    font-family: "Lato", sans-serif
+    font-size: 14px
+    font-weight: 400
+    text-decoration: none
+    margin-top: 25px
+  &.brown .m-social--item
+    background-color: #5f4a3c
+  &.blue .m-social--item
+    background-color: #384459
+  &.orange .m-social--item
+    background-color: #925923
+  &.gray .m-social--item
+    background-color: #3f454a
+
+  .m-social--item
+    +inline-block
+    width: 35px
+    height: 35px
+    border-radius: 35px
+    margin: 0 7px
+    .icon-facebook
+      @extend %icon-social--common
+      background-image: url('../images/icon-facebook.svg')
+    .icon-twitter
+      @extend %icon-social--common
+      background-image: url('../images/icon-twitter.svg')
+    .icon-email
+      @extend %icon-social--common
+      background-image: url('../images/icon-email.svg')
+

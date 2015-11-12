@@ -1,7 +1,9 @@
 .p-tips--wrapper
   overflow: hidden
-  height: 3240px
+  height: 3350px
   +breakpoint(laptop)
+    height: 3480px
+  +breakpoint(tabletlandscape)
     height: auto
   +breakpoint(tablet)
     height: auto
@@ -23,8 +25,10 @@
   background-image: url('../images/tips-banner-1.jpg')
   background-size: 100%
   background-position: top center
-  height: 600px
+  height: 700px
   +breakpoint(laptop)
+    height: 700px !important
+  +breakpoint(tabletlandscape)
     height: 1000px !important
   +breakpoint(tablet)
     height: 300px !important
@@ -54,7 +58,7 @@
     width: 322px
     height: 155px
     right: 0
-    top: 0
+    top: 120px
     +breakpoint(mobileonly)
       width: 161px
       height: 77px
@@ -66,6 +70,8 @@
   background-image: url('../images/tips-banner-2.jpg')
   height: 800px !important
   +breakpoint(laptop)
+    height: 700px !important
+  +breakpoint(tabletlandscape)
     height: 1100px !important
   +breakpoint(tablet)
     height: 250px !important
@@ -79,7 +85,9 @@
   background-image: url('../images/tips-banner-3.jpg')
   height: 700px !important
   +breakpoint(laptop)
-    height: 1000px !important
+    height: 700px !important
+  +breakpoint(tabletlandscape)
+    height: 1100px !important
   +breakpoint(tablet)
     height: 250px !important
     background-size: cover !important
@@ -92,7 +100,9 @@
   background-image: url('../images/tips-banner-4.jpg')
   height: 800px !important
   +breakpoint(laptop)
-    height: 1000px !important
+    height: 700px !important
+  +breakpoint(tabletlandscape)
+    height: 1100px !important
   +breakpoint(tablet)
     height: 250px !important
     background-size: cover !important
@@ -103,7 +113,15 @@
 .p-tips--bg5
   @extend %banner-bg--common
   background-image: url('../images/tips-banner-5.jpg')
+  background-position: bottom center
   height: 300px !important
+  p
+    font-family: "PT Serif", serif
+    font-size: 20px
+    color: white
+    padding: 130px 0
+    +breakpoint(mobileonly)
+      padding: 50px 0
   +breakpoint(tablet)
     height: 250px !important
     background-size: cover !important
@@ -117,6 +135,8 @@
   font-size: 14px
   text-align: center
   letter-spacing: 3px
+  margin-bottom: 0
+  padding-bottom: 0
   &.white
     color: white
 
@@ -128,20 +148,95 @@
   letter-spacing: 10px
   &.white
     color: white
+  +breakpoint(mobileonly)
+    font-size: 36px
+    line-height: 56px
+    letter-spacing: 2px
+
+.p-tips--feature
+  text-decoration: none
+  &:hover
+    h2
+      color: #C75724
+    // p
+    //   color: #C75724
 
 .p-tips--feature-heading
   color: #333
   font-family: "Lato", "Lato-Light", sans-serif
   font-weight: 300
   font-size: 30px
+  &:hover & a
+    color: #C75724
   +breakpoint(mobileonly)
     text-align: left
+
 
 
 #animate1
   transition: transform 0.3s ease-out
   position: relative
 
+#animate2
+  transition: transform 0.3s ease-out
+  position: relative
+  opacity: 0
+  +breakpoint(tablet)
+    opacity: 1
+  +breakpoint(tabletlandscape)
+    opacity: 1
+
+.animateFadeIn
+  transition: opacity 0.3s ease-out
+  opacity: 0
+  &:nth-child(1)
+    transition-delay: 0.1s
+  &:nth-child(2)
+    transition-delay: 0.2s
+  &:nth-child(3)
+    transition-delay: 0.3s
+  +breakpoint(tablet)
+    opacity: 1
+  +breakpoint(tabletlandscape)
+    opacity: 1
+
+.animateFadeIn1
+  @extend .animateFadeIn
+
+.animateFadeIn2
+  @extend .animateFadeIn
+
+.animateFadeIn3
+  @extend .animateFadeIn
+
 .zap
   transform: scale(2.5, 0)
+
+.p-tips--phone-attach
+  position: absolute
+  left: 0
+  top: -150px
+  background-image: url('../images/phone-attach.png')
+  background-size: 100%
+  width: 184px
+  height: 733px
+  +breakpoint(tablet)
+    top: -50px
+    z-index: 1000
+  +breakpoint(mobileonly)
+    display: none
+
+.p-tips--wallet-attach
+  position: absolute
+  right: 0
+  top: -350px
+  background-image: url('../images/wallet-attach.png')
+  background-size: 100%
+  width: 262px
+  height: 652px
+  +breakpoint(tablet)
+    top: -170px
+    z-index: 1000
+  +breakpoint(mobileonly)
+    display: none
 
