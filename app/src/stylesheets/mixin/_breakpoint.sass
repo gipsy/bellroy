@@ -1,6 +1,6 @@
 =breakpoint($point)
   @if $point == desktop
-    @media (min-width: 70em)
+    @media (max-width: 70em)
       @content
   @else if $point == laptop
     @media (max-width: 64em)
